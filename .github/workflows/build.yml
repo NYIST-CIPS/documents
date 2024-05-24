@@ -15,7 +15,7 @@ jobs:
     - name: Build docs
       run: mkdocs -v build
     - name: Deploy to GitHub Pages
-      if: github.repository == 'NYIST-CIPS/documents' && github.ref == 'refs/heads/master'
+      if: github.repository == 'NYIST-CIPS/documents' && github.ref == 'refs/heads/main'
       run: |
         CINFO="$(git log -1 --pretty="[%h] %an: %s")"
         cd site
